@@ -6,7 +6,8 @@
 void initializeBorrowList(BorrowList* borrowList) {
     borrowList->count = 0;
 }
-
+//getting a count of borrowed books until limit is reached
+//if borrowing isn't successful, return 0
 int borrowBook(BorrowList* borrowList, Book* book, User* user) {
     if (borrowList->count >= MAX_BORROWED_BOOKS) {
         printf("User has reached the maximum limit of borrowed books.\n");
