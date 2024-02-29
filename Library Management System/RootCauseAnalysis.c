@@ -16,10 +16,11 @@ void logError(ErrorLog* errorLog, const char* message) {
 
         errorLog->count++;
     } else {
+        //when overload is reached present the error
         printf("Error log is full. Unable to log more errors.\n");
     }
 }
-
+//display error log message needed
 void displayErrorLog(const ErrorLog* errorLog) {
     printf("Error Log:\n");
     for (int i = 0; i < errorLog->count; ++i) {
