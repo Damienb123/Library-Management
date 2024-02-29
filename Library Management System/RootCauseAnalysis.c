@@ -6,7 +6,7 @@
 void initializeErrorLog(ErrorLog* errorLog) {
     errorLog->count = 0;
 }
-
+//if log entries hit a max limit present the error
 void logError(ErrorLog* errorLog, const char* message) {
     if (errorLog->count < MAX_LOG_ENTRIES) {
         // Log the error with timestamp (you may implement this based on your requirements)
